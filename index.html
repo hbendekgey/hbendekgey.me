@@ -7,8 +7,7 @@
 <html>
 
 <head>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity=""
-	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 	<title>Harry Bendekgey</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -26,8 +25,8 @@
 		<nav id="nav">
 			<ul>
 				<li><a href="#intro" class="active">About</a></li>
+				<li><a href="#second">Teaching</a></li>
 				<li><a href="#first">Interests</a></li>
-				<!-- <li><a href="#second">Crafts</a></li> -->
 				<li><a href="#third">Publications</a></li>
 				<li><a href="#cta">Contact</a></li>
 			</ul>
@@ -43,7 +42,7 @@
 						<header class="major">
 							<h2>I'm Harry Bendekgey,</h2>
 						</header>
-						<p>a fourth-year computer science Ph.D. candidate at UC Irvine advised by <a href="https://www.ics.uci.edu/~sudderth/">Erik Sudderth</a>.  My primary research area is probabilistic machine learning.<br>
+						<p>a fifth-year computer science Ph.D. candidate at UC Irvine advised by <a href="https://www.ics.uci.edu/~sudderth/">Erik Sudderth</a>.  My primary research area is probabilistic machine learning.<br>
 						I am obsessed with board games, (recent favorites are <i>Spirit Island</i>, <i>Betrayal Legacy</i> and <i>Root</i>) I'm learning to surf, (I am not good at it) and I'm raising a puppy named <a href="images/Claude.jpg">Claude</a> (Zoom is hard even for the best of us).
 						<ul class="actions">
 							<li><a href="resumes/res.pdf" class="button primary">Academic Resume</a></li>
@@ -54,6 +53,16 @@
 				</div>
 			</section>
 
+			<!-- Second Section -->
+			<section id="second" class="main special">
+				<header class="major">
+					<h2>Teaching</h2>
+				</header>
+				<ul class="features">
+					<p>Summer 2023 I am teaching ICS 6N: Computational Linear Algebra. <a href="6N_Syllabus.pdf">The syllabus can be found here.</a></p>
+				</ul>
+			</section>
+
 			<!-- First Section -->
 			<section id="first" class="main special">
 				<header class="major">
@@ -61,19 +70,19 @@
 				</header>
 				<ul class="features">
 					<li>
-						<span class="icon major style5 fas fa-shoe-prints"></span>
-						<h3>Stochastic Processes</h3>
-						<p>Stochastic Processes are a powerful tool for modeling real-world phenomena, from national elections to microscopic diffusion. For these models to be useful, we must combine domain-specific knowledge with the mathematical tools and tricks necessary for efficient inference.</p>
+						<span class="icon major style1 fas fa-diagram-project"></span>
+						<h3>Structured Generative Modeling</h3>
+						<p>Generative models are not just useful for generating synthetic data; they also help us understand the underlying factors of variation in our data. My work aims to build generative models that are interpretable and give us insight into the data we train it on.</p>
+					</li>
+					<li>
+						<span class="icon major style5 fas fa-circle-question"></span>
+						<h3>Inference in Generative Models</h3>
+						<p>How can we leverage trained graphical models to solve new inference questions at test-time? Often times, this requires a careful treatment of multimodality. We aim to improve inference methods to impute missing data, estimate meaningful underlying parameters, and cluster observations.</p>
 					</li>
 					<li>
 						<span class="icon major style3 fas fa-balance-scale"></span>
 						<h3>Fair Machine Learning</h3>
-						<p>As real-world decision-making become increasingly automated, ethical questions about the fairness of our models are no longer thought experiments. Left unchecked, algorithms can exacerbate disparities between genders, racial groups, or other legally-protected categories of identity.</p>
-					</li>
-					<li>
-						<span class="icon major style1 fas fa-viruses"></span>
-						<h3>Computational Biology</h3>
-						<p>The complexity of biological systems has historically made both understanding them and simulating them difficult. Recent gains in computational power and the creation of large-scale data sets provide the potential for many new discoveries.</p>
+						<p>As decision-making processes become increasingly automated, ethical questions about model fairness are no longer thought experiments. Left unchecked, algorithms can exacerbate disparities between genders, racial groups, and other legally-protected categories of identity.</p>
 					</li>
 				</ul>
 			</section>
@@ -125,10 +134,13 @@
 				<table>
 					<tbody>
 						<tr>
+							<td align="left"><i>In Submission: </i> Unbiased Learning of Deep Generative Models with Structured Discrete Representations. <br><b>H Bendekgey</b>, G Hope, E Sudderth. <a href="https://arxiv.org/pdf/2306.08230.pdf">ArXiv Link</a> </td>
+						</tr>
+						<tr>
 							<td align="left"><i>Scalable & Stable Surrogates for Flexible Classifiers with Fairness Constraints.</i> <br><b>H Bendekgey</b>, E Sudderth. NeurIPS 2021.<br> Talks and Presentations: Southern California Machine Learning Symposium 2021</td>
 						</tr>
 						<tr>
-							<td align="left"><i>Scaling study of diffusion in dynamic crowded spaces.</i> <br><b>H Bendekgey</b>, G Huber, and D Yllanes. <a href="https://arxiv.org/abs/2011.02444">ArXiv Link</a> <br>Talks and Presentations: <a href="http://meetings.aps.org/Meeting/MAR20/Session/F24.10">March Meeting 2020</a>, <a href="https://meetings.aps.org/Meeting/MAR22/Session/T09.10">March Meeting 2022</a></td>
+							<td align="left"><i>Scaling study of diffusion in dynamic crowded spaces.</i> <br><b>H Bendekgey</b>, G Huber, and D Yllanes. <a href="https://arxiv.org/abs/2011.02444">ArXiv Link</a> <br>Talks and Presentations: <a href="https://meetings.aps.org/Meeting/MAR22/Session/T09.10">March Meeting 2022</a></td>
 						</tr>
 						<tr>
 							<td align="left"><i>Clustering Player Strategies from Variable-Length Game Logs in Dominion</i> <br> <b>H Bendekgey</b>. AAAI Workshop on Knowledge Extraction from Games (KEG), 2019. <a href="https://arxiv.org/pdf/1811.11273">ArXiv Link</a></td>
