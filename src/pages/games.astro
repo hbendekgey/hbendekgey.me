@@ -1,0 +1,1516 @@
+---
+import "@fontsource/inter/latin-400.css";
+import "@fontsource/inter/latin-600.css";
+import "@fontsource/lora/400.css";
+import "@fontsource/lora/600.css";
+import inter400 from "@fontsource/inter/files/inter-latin-400-normal.woff2";
+import inter600 from "@fontsource/inter/files/inter-latin-600-normal.woff2";
+import lora400 from "@fontsource/lora/files/lora-latin-400-normal.woff2";
+import lora600 from "@fontsource/lora/files/lora-latin-600-normal.woff2";
+---
+
+<!doctype html>
+<html class="scroll-smooth">
+  <head>
+    <title>Harry's Game Catalog</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+
+    <!-- Font preloads -->
+    <link
+      rel="preload"
+      href={inter400}
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link
+      rel="preload"
+      href={inter600}
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link
+      rel="preload"
+      href={lora400}
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link
+      rel="preload"
+      href={lora600}
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+  </head>
+
+  <body class="px-4 font-serif">
+    <nav
+      class="flex justify-between items-center p-4 sticky top-0 backdrop-blur bg-white/80 text-neutral-600 font-sans"
+    >
+      <h3 class="font-bold text-lg">Harry's Game Catalog</h3>
+      <div class="flex space-x-2">
+        <a
+          href="#heavy"
+          class="underline underline-offset-2 decoration-black/20 hover:text-black transition-colors"
+          >Heavier</a
+        >
+        <span>/</span>
+        <a
+          href="#light"
+          class="underline underline-offset-2 decoration-black/20 hover:text-black transition-colors"
+          >Lighter</a
+        >
+        <span>/</span>
+        <a
+          href="#party"
+          class="underline underline-offset-2 decoration-black/20 hover:text-black transition-colors"
+          >Party</a
+        >
+        <span>/</span>
+        <a
+          href="#other"
+          class="underline underline-offset-2 decoration-black/20 hover:text-black transition-colors"
+          >Other</a
+        >
+      </div>
+    </nav>
+
+    <div class="prose max-w-screen-lg m-auto prose-headings:font-sans -mt-12 pt-12" id="intro">
+      <section class="mt-8 border rounded-md p-5">
+        <div>
+          <h3 class="mt-0">
+            <b> My Board Game List!</b>
+          </h3>
+
+          <p>
+            If you're coming over for a board game night, just looking for new
+            games to play, or thinking of gifting me a game you might find this
+            list useful. For each game, I list the:
+          </p>
+          <ul class="space-y-1 list-none list-inside">
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-brain inline mr-2 mb-0.5"
+                ><path
+                  d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
+                ></path><path
+                  d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"
+                ></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"
+                ></path><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path><path
+                  d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path
+                  d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path
+                  d="M19.938 10.5a4 4 0 0 1 .585.396"></path><path
+                  d="M6 18a4 4 0 0 1-1.967-.516"></path><path
+                  d="M19.967 17.484A4 4 0 0 1 18 18"></path></svg
+              >complexity rating, taken from <a
+                href="https://boardgamegeek.com/"
+              >
+                BoardGameGeek
+              </a>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-users inline mr-2 mb-0.5"
+                ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"
+                ></path><circle cx="9" cy="7" r="4"></circle><path
+                  d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+                  d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+              >number of players I would have fun playing with
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="red"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-users inline mr-2 mb-0.5"
+                ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"
+                ></path><circle cx="9" cy="7" r="4"></circle><path
+                  d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+                  d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+              >number of players I would have <i>the most</i> fun playing with
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div id="heavy" class="grid grid-cols-3 gap-4">
+        <div></div>
+        <div><h3 class="mt-16 ml-16 mr-16 pt-4 pb-4 text-center rounded bg-red-300">
+          <b>Heavier Games</b>
+        </h3></div>
+        <div></div>
+        <div class="mt-8 border rounded-md p-5 text-center">
+
+          <div class="flex justify-center">
+            <img
+            class="rounded pt-0 mt-0 size-52 flex justify-center"
+            src="images/games/spirit_island.jpg"
+            alt="Spirit Island"
+          />
+          </div>
+      
+          <h3 class="mt-0">
+            <b>Spirit Island</b>
+          </h3>
+  
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-brain inline mr-2 mb-0.5"
+              ><path
+                d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
+              ></path><path
+                d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"
+              ></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"
+              ></path><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path><path
+                d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path
+                d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path
+                d="M19.938 10.5a4 4 0 0 1 .585.396"></path><path
+                d="M6 18a4 4 0 0 1-1.967-.516"></path><path
+                d="M19.967 17.484A4 4 0 0 1 18 18"></path></svg
+            > 4.06
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-users inline ml-6 mr-2 mb-0.5"
+              ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+                cx="9"
+                cy="7"
+                r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+                d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+            > 2-4
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="red"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-users inline mr-2 ml-6 mb-0.5"
+              ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+                cx="9"
+                cy="7"
+                r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+                d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+            > 2
+          </p>
+
+          <p>
+            <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Cooperative </div>
+            <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Assymetric </div>
+            <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Settler-Destruction </div>
+          </p>
+        </div>
+
+        <div class="mt-8 border rounded-md p-5 text-center">
+
+          <div class="flex justify-center">
+            <img
+            class="rounded pt-0 mt-0 size-52 justify-center"
+            src="images/games/pax_pamir.jpg"
+            alt="Pax Pamir"
+          />
+          </div>
+
+          <h3 class="mt-0">
+            <b>Pax Pamir (2e)</b>
+          </h3>
+  
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-brain inline mr-2 mb-0.5"
+              ><path
+                d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
+              ></path><path
+                d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"
+              ></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"
+              ></path><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path><path
+                d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path
+                d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path
+                d="M19.938 10.5a4 4 0 0 1 .585.396"></path><path
+                d="M6 18a4 4 0 0 1-1.967-.516"></path><path
+                d="M19.967 17.484A4 4 0 0 1 18 18"></path></svg
+            > 3.85
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-users inline ml-6 mr-2 mb-0.5"
+              ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+                cx="9"
+                cy="7"
+                r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+                d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+            > 2-5
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="red"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-users inline mr-2 ml-6 mb-0.5"
+              ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+                cx="9"
+                cy="7"
+                r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+                d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+            > 4
+          </p>
+
+          <p>
+            <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Direct Conflict </div>
+            <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Alliances </div>
+            <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Historical </div>
+          </p>
+        </div>
+
+        <div class="mt-8 border rounded-md p-5 text-center">
+
+          <div class="flex justify-center">
+            <img
+            class="rounded pt-0 mt-0 size-52 justify-center"
+            src="images/games/scythe.jpg"
+            alt="Scythe"
+          />
+          </div>
+
+          <h3 class="mt-0">
+            <b>Scythe</b>
+          </h3>
+  
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-brain inline mr-2 mb-0.5"
+              ><path
+                d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
+              ></path><path
+                d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"
+              ></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"
+              ></path><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path><path
+                d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path
+                d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path
+                d="M19.938 10.5a4 4 0 0 1 .585.396"></path><path
+                d="M6 18a4 4 0 0 1-1.967-.516"></path><path
+                d="M19.967 17.484A4 4 0 0 1 18 18"></path></svg
+            > 3.45
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-users inline ml-6 mr-2 mb-0.5"
+              ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+                cx="9"
+                cy="7"
+                r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+                d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+            > 2-5
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="red"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-users inline mr-2 ml-6 mb-0.5"
+              ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+                cx="9"
+                cy="7"
+                r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+                d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+            > 4
+          </p>
+
+          <p>
+            <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Direct Conflict </div>
+            <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Engine Building </div>
+            <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Steampunk </div>
+          </p>
+        </div>
+
+        <div class="mt-8 border rounded-md p-5 text-center">
+
+          <div class="flex justify-center">
+            <img
+            class="rounded pt-0 mt-0 size-52 justify-center"
+            src="images/games/root.jpg"
+            alt="Root"
+          />
+          </div>
+
+          <h3 class="mt-0">
+            <b>Root</b>
+          </h3>
+  
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-brain inline mr-2 mb-0.5"
+              ><path
+                d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
+              ></path><path
+                d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"
+              ></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"
+              ></path><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path><path
+                d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path
+                d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path
+                d="M19.938 10.5a4 4 0 0 1 .585.396"></path><path
+                d="M6 18a4 4 0 0 1-1.967-.516"></path><path
+                d="M19.967 17.484A4 4 0 0 1 18 18"></path></svg
+            > 3.80
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-users inline ml-6 mr-2 mb-0.5"
+              ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+                cx="9"
+                cy="7"
+                r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+                d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+            > 3-5
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="red"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-users inline mr-2 ml-6 mb-0.5"
+              ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+                cx="9"
+                cy="7"
+                r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+                d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+            > 4
+          </p>
+
+          <p>
+            <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Wargame </div>
+            <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Assymetric </div>
+            <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Alliances </div>
+            <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> So Cute </div>
+          </p>
+        </div>
+
+      </div>
+
+    <div id="light" class="grid grid-cols-3 gap-4">
+      <div></div>
+      <div><h3 class="mt-16 ml-16 mr-16 pt-4 pb-4 text-center rounded bg-blue-300">
+        <b>Lighter Games</b>
+      </h3></div>
+      <div></div>
+      <div class="mt-8 border rounded-md p-5 text-center">
+
+        <div class="flex justify-center">
+          <img
+          class="rounded pt-0 mt-0 size-52 flex justify-center"
+          src="images/games/7_wonders_duel.jpg"
+          alt="7 Wonders: Duel"
+        />
+        </div>
+    
+        <h3 class="mt-0">
+          <b>7 Wonders: Duel</b>
+        </h3>
+
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-brain inline mr-2 mb-0.5"
+            ><path
+              d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
+            ></path><path
+              d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"
+            ></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"
+            ></path><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path><path
+              d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path
+              d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path
+              d="M19.938 10.5a4 4 0 0 1 .585.396"></path><path
+              d="M6 18a4 4 0 0 1-1.967-.516"></path><path
+              d="M19.967 17.484A4 4 0 0 1 18 18"></path></svg
+          > 2.23
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-users inline ml-6 mr-2 mb-0.5"
+            ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+              cx="9"
+              cy="7"
+              r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+          > 2
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="red"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-users inline mr-2 ml-6 mb-0.5"
+            ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+              cx="9"
+              cy="7"
+              r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+          > 2
+        </p>
+
+        <p>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Drafting </div>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Engine Building </div>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Historical </div>
+        </p>
+      </div>
+
+      <div class="mt-8 border rounded-md p-5 text-center">
+
+        <div class="flex justify-center">
+          <img
+          class="rounded pt-0 mt-0 size-52 justify-center"
+          src="images/games/onitama.png"
+          alt="Onitama"
+        />
+        </div>
+
+        <h3 class="mt-0">
+          <b>Onitama</b>
+        </h3>
+
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-brain inline mr-2 mb-0.5"
+            ><path
+              d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
+            ></path><path
+              d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"
+            ></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"
+            ></path><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path><path
+              d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path
+              d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path
+              d="M19.938 10.5a4 4 0 0 1 .585.396"></path><path
+              d="M6 18a4 4 0 0 1-1.967-.516"></path><path
+              d="M19.967 17.484A4 4 0 0 1 18 18"></path></svg
+          > 1.65
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-users inline ml-6 mr-2 mb-0.5"
+            ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+              cx="9"
+              cy="7"
+              r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+          > 2
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="red"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-users inline mr-2 ml-6 mb-0.5"
+            ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+              cx="9"
+              cy="7"
+              r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+          > 2
+        </p>
+
+        <p>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Capture-the-King </div>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Modular Setup </div>
+        </p>
+      </div>
+
+      <div class="mt-8 border rounded-md p-5 text-center">
+
+        <div class="flex justify-center">
+          <img
+          class="rounded pt-0 mt-0 size-52 justify-center"
+          src="images/games/azul.jpeg"
+          alt="Azul"
+        />
+        </div>
+
+        <h3 class="mt-0">
+          <b>Azul</b>
+        </h3>
+
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-brain inline mr-2 mb-0.5"
+            ><path
+              d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
+            ></path><path
+              d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"
+            ></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"
+            ></path><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path><path
+              d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path
+              d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path
+              d="M19.938 10.5a4 4 0 0 1 .585.396"></path><path
+              d="M6 18a4 4 0 0 1-1.967-.516"></path><path
+              d="M19.967 17.484A4 4 0 0 1 18 18"></path></svg
+          > 1.76
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-users inline ml-6 mr-2 mb-0.5"
+            ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+              cx="9"
+              cy="7"
+              r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+          > 2-4
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="red"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-users inline mr-2 ml-6 mb-0.5"
+            ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+              cx="9"
+              cy="7"
+              r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+          > 2
+        </p>
+
+        <p>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Drafting </div>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Pattern Building </div>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Abstract </div>
+        </p>
+      </div>
+
+      <div class="mt-8 border rounded-md p-5 text-center">
+
+        <div class="flex justify-center">
+          <img
+          class="rounded pt-0 mt-0 size-52 justify-center"
+          src="images/games/dominion.jpg"
+          alt="Dominion"
+        />
+        </div>
+
+        <h3 class="mt-0">
+          <b>Dominion</b>
+        </h3>
+
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-brain inline mr-2 mb-0.5"
+            ><path
+              d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
+            ></path><path
+              d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"
+            ></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"
+            ></path><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path><path
+              d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path
+              d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path
+              d="M19.938 10.5a4 4 0 0 1 .585.396"></path><path
+              d="M6 18a4 4 0 0 1-1.967-.516"></path><path
+              d="M19.967 17.484A4 4 0 0 1 18 18"></path></svg
+          > 2.41
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-users inline ml-6 mr-2 mb-0.5"
+            ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+              cx="9"
+              cy="7"
+              r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+          > 2-4
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="red"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-users inline mr-2 ml-6 mb-0.5"
+            ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+              cx="9"
+              cy="7"
+              r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+          > 3
+        </p>
+
+        <p>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Engine Building </div>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Deck Building </div>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Modular Setup </div>
+        </p>
+      </div>
+
+      <div class="mt-8 border rounded-md p-5 text-center">
+
+        <div class="flex justify-center">
+          <img
+          class="rounded pt-0 mt-0 size-52 justify-center"
+          src="images/games/7_wonders.jpg"
+          alt="7 Wonders"
+        />
+        </div>
+
+        <h3 class="mt-0">
+          <b>7 Wonders</b>
+        </h3>
+
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-brain inline mr-2 mb-0.5"
+            ><path
+              d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
+            ></path><path
+              d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"
+            ></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"
+            ></path><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path><path
+              d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path
+              d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path
+              d="M19.938 10.5a4 4 0 0 1 .585.396"></path><path
+              d="M6 18a4 4 0 0 1-1.967-.516"></path><path
+              d="M19.967 17.484A4 4 0 0 1 18 18"></path></svg
+          > 2.32
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-users inline ml-6 mr-2 mb-0.5"
+            ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+              cx="9"
+              cy="7"
+              r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+          > 4-6
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="red"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-users inline mr-2 ml-6 mb-0.5"
+            ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+              cx="9"
+              cy="7"
+              r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+          > 4-5
+        </p>
+
+        <p>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Drafting </div>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Engine Building </div>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Historical </div>
+        </p>
+      </div>
+
+      <div class="mt-8 border rounded-md p-5 text-center">
+
+        <div class="flex justify-center">
+          <img
+          class="rounded pt-0 mt-0 size-52 justify-center"
+          src="images/games/colt.jpg"
+          alt="Colt Express"
+        />
+        </div>
+
+        <h3 class="mt-0">
+          <b>Colt Express</b>
+        </h3>
+
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-brain inline mr-2 mb-0.5"
+            ><path
+              d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
+            ></path><path
+              d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"
+            ></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"
+            ></path><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path><path
+              d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path
+              d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path
+              d="M19.938 10.5a4 4 0 0 1 .585.396"></path><path
+              d="M6 18a4 4 0 0 1-1.967-.516"></path><path
+              d="M19.967 17.484A4 4 0 0 1 18 18"></path></svg
+          > 1.83
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-users inline ml-6 mr-2 mb-0.5"
+            ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+              cx="9"
+              cy="7"
+              r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+          > 4-6
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="red"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-users inline mr-2 ml-6 mb-0.5"
+            ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+              cx="9"
+              cy="7"
+              r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+          > 5-6
+        </p>
+
+        <p>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Take That! </div>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Action Queuing </div>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Train Robbing </div>
+        </p>
+      </div>
+
+
+    </div>
+
+
+    <div id="party" class="grid grid-cols-3 gap-4">
+      <div></div>
+      <div><h3 class="mt-16 ml-16 mr-16 pt-4 pb-4 text-center rounded bg-green-300">
+        <b>Party Games</b>
+      </h3></div>
+      <div></div>
+      <div class="mt-8 border rounded-md p-5 text-center">
+
+        <div class="flex justify-center">
+          <img
+          class="rounded pt-0 mt-0 size-52 flex justify-center"
+          src="images/games/codenames.jpeg"
+          alt="Codenames: Pictures"
+        />
+        </div>
+    
+        <h3 class="mt-0">
+          <b>Codenames: Pictures</b>
+        </h3>
+
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-brain inline mr-2 mb-0.5"
+            ><path
+              d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
+            ></path><path
+              d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"
+            ></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"
+            ></path><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path><path
+              d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path
+              d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path
+              d="M19.938 10.5a4 4 0 0 1 .585.396"></path><path
+              d="M6 18a4 4 0 0 1-1.967-.516"></path><path
+              d="M19.967 17.484A4 4 0 0 1 18 18"></path></svg
+          > 1.24
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-users inline ml-6 mr-2 mb-0.5"
+            ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+              cx="9"
+              cy="7"
+              r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+          > 4-8
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="red"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-users inline mr-2 ml-6 mb-0.5"
+            ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+              cx="9"
+              cy="7"
+              r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+          > 6
+        </p>
+
+        <p>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Clue Master </div>
+        </p>
+      </div>
+
+      <div class="mt-8 border rounded-md p-5 text-center">
+
+        <div class="flex justify-center">
+          <img
+          class="rounded pt-0 mt-0 size-52 justify-center"
+          src="images/games/decrypto.jpg"
+          alt="Decrypto"
+        />
+        </div>
+
+        <h3 class="mt-0">
+          <b>Decrypto</b>
+        </h3>
+
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-brain inline mr-2 mb-0.5"
+            ><path
+              d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
+            ></path><path
+              d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"
+            ></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"
+            ></path><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path><path
+              d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path
+              d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path
+              d="M19.938 10.5a4 4 0 0 1 .585.396"></path><path
+              d="M6 18a4 4 0 0 1-1.967-.516"></path><path
+              d="M19.967 17.484A4 4 0 0 1 18 18"></path></svg
+          > 1.81
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-users inline ml-6 mr-2 mb-0.5"
+            ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+              cx="9"
+              cy="7"
+              r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+          > 4-8
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="red"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-users inline mr-2 ml-6 mb-0.5"
+            ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+              cx="9"
+              cy="7"
+              r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+          > 6
+        </p>
+
+        <p>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Clue Master </div>
+        </p>
+      </div>
+
+      <div class="mt-8 border rounded-md p-5 text-center">
+
+        <div class="flex justify-center">
+          <img
+          class="rounded pt-0 mt-0 size-52 justify-center"
+          src="images/games/good_cop.jpg"
+          alt="Good Cop Bad Cop"
+        />
+        </div>
+
+        <h3 class="mt-0">
+          <b>Good Cop Bad Cop</b>
+        </h3>
+
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-brain inline mr-2 mb-0.5"
+            ><path
+              d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
+            ></path><path
+              d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"
+            ></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"
+            ></path><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path><path
+              d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path
+              d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path
+              d="M19.938 10.5a4 4 0 0 1 .585.396"></path><path
+              d="M6 18a4 4 0 0 1-1.967-.516"></path><path
+              d="M19.967 17.484A4 4 0 0 1 18 18"></path></svg
+          > 1.25
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-users inline ml-6 mr-2 mb-0.5"
+            ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+              cx="9"
+              cy="7"
+              r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+          > 6-8
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="red"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-users inline mr-2 ml-6 mb-0.5"
+            ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+              cx="9"
+              cy="7"
+              r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+          > 6, 8
+        </p>
+
+        <p>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Hidden Teams </div>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Take That! </div>
+        </p>
+      </div>
+
+      <div class="mt-8 border rounded-md p-5 text-center">
+
+        <div class="flex justify-center">
+          <img
+          class="rounded pt-0 mt-0 size-52 justify-center"
+          src="images/games/one_night.png"
+          alt="One Night Ultimate Werewolf"
+        />
+        </div>
+
+        <h3 class="mt-0">
+          <b>One Night Ultimate Werewolf</b>
+        </h3>
+
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-brain inline mr-2 mb-0.5"
+            ><path
+              d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
+            ></path><path
+              d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"
+            ></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"
+            ></path><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path><path
+              d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path
+              d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path
+              d="M19.938 10.5a4 4 0 0 1 .585.396"></path><path
+              d="M6 18a4 4 0 0 1-1.967-.516"></path><path
+              d="M19.967 17.484A4 4 0 0 1 18 18"></path></svg
+          > 1.39
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-users inline ml-6 mr-2 mb-0.5"
+            ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+              cx="9"
+              cy="7"
+              r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+          > 5-10
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="red"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-users inline mr-2 ml-6 mb-0.5"
+            ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+              cx="9"
+              cy="7"
+              r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+          > 6-8
+        </p>
+
+        <p>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Social Deduction </div>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Lightning Rounds </div>
+        </p>
+      </div>
+
+      <div class="mt-8 border rounded-md p-5 text-center">
+
+        <div class="flex justify-center">
+          <img
+          class="rounded pt-0 mt-0 size-52 justify-center"
+          src="images/games/secret_hitler.jpg"
+          alt="Secret Hitler"
+        />
+        </div>
+
+        <h3 class="mt-0">
+          <b>Secret Hitler</b>
+        </h3>
+
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-brain inline mr-2 mb-0.5"
+            ><path
+              d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
+            ></path><path
+              d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"
+            ></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"
+            ></path><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path><path
+              d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path
+              d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path
+              d="M19.938 10.5a4 4 0 0 1 .585.396"></path><path
+              d="M6 18a4 4 0 0 1-1.967-.516"></path><path
+              d="M19.967 17.484A4 4 0 0 1 18 18"></path></svg
+          > 1.74
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-users inline ml-6 mr-2 mb-0.5"
+            ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+              cx="9"
+              cy="7"
+              r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+          > 6-10
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="red"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-users inline mr-2 ml-6 mb-0.5"
+            ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+              cx="9"
+              cy="7"
+              r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+          > 8, 10
+        </p>
+
+        <p>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Social Deduction </div>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Sensitive Themes </div>
+        </p>
+      </div>
+
+      <div class="mt-8 border rounded-md p-5 text-center">
+
+        <div class="flex justify-center">
+          <img
+          class="rounded pt-0 mt-0 size-52 justify-center"
+          src="images/games/two_rooms.jpg"
+          alt="Two Rooms and a Boom"
+        />
+        </div>
+
+        <h3 class="mt-0">
+          <b>Two Rooms and a Boom</b>
+        </h3>
+
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-brain inline mr-2 mb-0.5"
+            ><path
+              d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
+            ></path><path
+              d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"
+            ></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"
+            ></path><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path><path
+              d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path
+              d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path
+              d="M19.938 10.5a4 4 0 0 1 .585.396"></path><path
+              d="M6 18a4 4 0 0 1-1.967-.516"></path><path
+              d="M19.967 17.484A4 4 0 0 1 18 18"></path></svg
+          > 1.46
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-users inline ml-6 mr-2 mb-0.5"
+            ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+              cx="9"
+              cy="7"
+              r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+          > 10+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="red"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-users inline mr-2 ml-6 mb-0.5"
+            ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
+              cx="9"
+              cy="7"
+              r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
+              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+          > 14
+        </p>
+
+        <p>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Social Deduction </div>
+          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Lightning Rounds </div>
+        </p>
+      </div>
+    </div>
+
+    <div id="other" class="grid grid-cols-3 gap-4">
+      <div></div>
+      <div><h3 class="mt-16 ml-16 mr-16 pt-4 pb-4 text-center rounded">
+        <b>Other Games</b>
+      </h3></div>
+      <div></div>
+      <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 text-center rounded-xl bg-red-300"> Puerto Rico </div>
+      <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 text-center rounded-xl bg-blue-200"> 7th Continent </div>
+      <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 text-center rounded-xl bg-blue-200"> Ahoy </div>
+      <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 text-center rounded-xl bg-blue-200"> Fort </div>
+      <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 text-center rounded-xl bg-blue-200"> Wingspan </div>
+      <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 text-center rounded-xl bg-blue-200"> Parks </div>
+      <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 text-center rounded-xl bg-blue-200"> Stone Age </div>
+      <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 text-center rounded-xl bg-blue-200"> Aeon's End </div>
+      <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 text-center rounded-xl bg-blue-200"> Catan </div>
+      <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 text-center rounded-xl bg-blue-200"> Cryptid </div>
+      <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 text-center rounded-xl bg-blue-200"> Not Alone </div>
+      <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 text-center rounded-xl bg-blue-200"> The Crew: Quest for Planet Nine </div>
+      <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 text-center rounded-xl bg-blue-200"> Ticket to Ride </div>
+      <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 text-center rounded-xl bg-blue-200"> Ticket to Ride: Europe </div>
+      <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 text-center rounded-xl bg-blue-200"> Sherrif of Nottingham </div>
+      <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 text-center rounded-xl bg-green-200"> Dixit </div>
+      <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 text-center rounded-xl bg-green-200"> Inhuman Conditions </div>
+      <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 text-center rounded-xl bg-green-200"> Imagine </div>
+      <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 text-center rounded-xl bg-green-200"> Cards Against Humanity </div>
+    </div>
+
+  </div>
+
+    <footer>
+      <p class="text-xs text-center mt-5 mb-2">&copy; Harry Bendekgey</p>
+    </footer>
+  </body>
+</html>
