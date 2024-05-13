@@ -13,6 +13,13 @@ import lora600 from "@fontsource/lora/files/lora-latin-600-normal.woff2";
 <html class="scroll-smooth">
   <head>
     <title>Harry's Game Catalog</title>
+    <link rel="icon" type="image/svg+xml"
+      href="data:image/svg+xml,
+      <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' 
+      fill='none' stroke='grey' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-user-search'>
+      <circle cx='10' cy='7' r='4'/>
+      <path d='M10.3 15H7a4 4 0 0 0-4 4v2'/>
+      <circle cx='17' cy='17' r='3'/><path d='m21 21-1.9-1.9'/></svg>"/>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -55,7 +62,7 @@ import lora600 from "@fontsource/lora/files/lora-latin-600-normal.woff2";
 
   <body class="px-4 font-serif">
     <nav
-      class="flex justify-between items-center p-4 sticky top-0 backdrop-blur bg-white/80 text-neutral-600 font-sans"
+      class="sm:flex justify-between items-center p-4 sticky top-0 backdrop-blur bg-white/80 text-neutral-600 font-sans"
     >
       <h3 class="font-bold text-lg">Harry's Game Catalog</h3>
       <div class="flex space-x-2">
@@ -167,18 +174,17 @@ import lora600 from "@fontsource/lora/files/lora-latin-600-normal.woff2";
         </div>
       </section>
 
-      <div id="heavy" class="grid grid-cols-3 gap-4">
-        <div></div>
-        <div><h3 class="mt-16 ml-16 mr-16 pt-4 pb-4 text-center rounded bg-red-300">
+      <div id="heavy" class="flex justify-center">
+        <h3 class="mt-16 w-60 py-4 text-center rounded bg-red-300">
           <b>Heavier Games</b>
-        </h3></div>
-        <div></div>
+        </h3>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <div class="mt-8 border rounded-md p-5 text-center">
-
           <div class="flex justify-center">
             <img
             class="rounded pt-0 mt-0 size-52 flex justify-center"
-            src="https://www.hbendekgey.me/images/games/spirit_island.jpg"
+            src="/images/games/spirit_island.jpg"
             alt="Spirit Island"
           />
           </div>
@@ -259,7 +265,7 @@ import lora600 from "@fontsource/lora/files/lora-latin-600-normal.woff2";
           <div class="flex justify-center">
             <img
             class="rounded pt-0 mt-0 size-52 justify-center"
-            src="https://www.hbendekgey.me/images/games/pax_pamir.jpg"
+            src="/images/games/pax_pamir.jpg"
             alt="Pax Pamir"
           />
           </div>
@@ -340,7 +346,7 @@ import lora600 from "@fontsource/lora/files/lora-latin-600-normal.woff2";
           <div class="flex justify-center">
             <img
             class="rounded pt-0 mt-0 size-52 justify-center"
-            src="https://www.hbendekgey.me/images/games/scythe.jpg"
+            src="/images/games/scythe.jpg"
             alt="Scythe"
           />
           </div>
@@ -421,7 +427,7 @@ import lora600 from "@fontsource/lora/files/lora-latin-600-normal.woff2";
           <div class="flex justify-center">
             <img
             class="rounded pt-0 mt-0 size-52 justify-center"
-            src="https://www.hbendekgey.me/images/games/root.jpg"
+            src="/images/games/root.jpg"
             alt="Root"
           />
           </div>
@@ -500,18 +506,18 @@ import lora600 from "@fontsource/lora/files/lora-latin-600-normal.woff2";
 
       </div>
 
-    <div id="light" class="grid grid-cols-3 gap-4">
-      <div></div>
-      <div><h3 class="mt-16 ml-16 mr-16 pt-4 pb-4 text-center rounded bg-blue-300">
+    <div id="light" class="flex justify-center">
+      <h3 class="mt-16 w-60 py-4 text-center rounded bg-blue-300">
         <b>Lighter Games</b>
-      </h3></div>
-      <div></div>
+      </h3>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <div class="mt-8 border rounded-md p-5 text-center">
 
         <div class="flex justify-center">
           <img
           class="rounded pt-0 mt-0 size-52 flex justify-center"
-          src="https://www.hbendekgey.me/images/games/7_wonders_duel.jpg"
+          src="/images/games/7_wonders_duel.jpg"
           alt="7 Wonders: Duel"
         />
         </div>
@@ -592,7 +598,7 @@ import lora600 from "@fontsource/lora/files/lora-latin-600-normal.woff2";
         <div class="flex justify-center">
           <img
           class="rounded pt-0 mt-0 size-52 justify-center"
-          src="https://www.hbendekgey.me/images/games/onitama.png"
+          src="/images/games/onitama.png"
           alt="Onitama"
         />
         </div>
@@ -672,7 +678,7 @@ import lora600 from "@fontsource/lora/files/lora-latin-600-normal.woff2";
         <div class="flex justify-center">
           <img
           class="rounded pt-0 mt-0 size-52 justify-center"
-          src="https://www.hbendekgey.me/images/games/azul.jpeg"
+          src="/images/games/azul.jpeg"
           alt="Azul"
         />
         </div>
@@ -753,7 +759,7 @@ import lora600 from "@fontsource/lora/files/lora-latin-600-normal.woff2";
         <div class="flex justify-center">
           <img
           class="rounded pt-0 mt-0 size-52 justify-center"
-          src="https://www.hbendekgey.me/images/games/dominion.jpg"
+          src="/images/games/dominion.jpg"
           alt="Dominion"
         />
         </div>
@@ -834,7 +840,7 @@ import lora600 from "@fontsource/lora/files/lora-latin-600-normal.woff2";
         <div class="flex justify-center">
           <img
           class="rounded pt-0 mt-0 size-52 justify-center"
-          src="https://www.hbendekgey.me/images/games/7_wonders.jpg"
+          src="/images/games/7_wonders.jpg"
           alt="7 Wonders"
         />
         </div>
@@ -915,7 +921,7 @@ import lora600 from "@fontsource/lora/files/lora-latin-600-normal.woff2";
         <div class="flex justify-center">
           <img
           class="rounded pt-0 mt-0 size-52 justify-center"
-          src="https://www.hbendekgey.me/images/games/colt.jpg"
+          src="/images/games/colt.jpg"
           alt="Colt Express"
         />
         </div>
@@ -995,18 +1001,18 @@ import lora600 from "@fontsource/lora/files/lora-latin-600-normal.woff2";
     </div>
 
 
-    <div id="party" class="grid grid-cols-3 gap-4">
-      <div></div>
-      <div><h3 class="mt-16 ml-16 mr-16 pt-4 pb-4 text-center rounded bg-green-300">
+    <div id="party" class="flex justify-center">
+      <h3 class="mt-16 w-60 py-4 text-center rounded bg-green-300">
         <b>Party Games</b>
-      </h3></div>
-      <div></div>
+      </h3>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <div class="mt-8 border rounded-md p-5 text-center">
 
         <div class="flex justify-center">
           <img
           class="rounded pt-0 mt-0 size-52 flex justify-center"
-          src="https://www.hbendekgey.me/images/games/codenames.jpeg"
+          src="/images/games/codenames.jpeg"
           alt="Codenames: Pictures"
         />
         </div>
@@ -1085,7 +1091,7 @@ import lora600 from "@fontsource/lora/files/lora-latin-600-normal.woff2";
         <div class="flex justify-center">
           <img
           class="rounded pt-0 mt-0 size-52 justify-center"
-          src="https://www.hbendekgey.me/images/games/decrypto.jpg"
+          src="/images/games/decrypto.jpg"
           alt="Decrypto"
         />
         </div>
@@ -1164,7 +1170,7 @@ import lora600 from "@fontsource/lora/files/lora-latin-600-normal.woff2";
         <div class="flex justify-center">
           <img
           class="rounded pt-0 mt-0 size-52 justify-center"
-          src="https://www.hbendekgey.me/images/games/good_cop.jpg"
+          src="/images/games/good_cop.jpg"
           alt="Good Cop Bad Cop"
         />
         </div>
@@ -1244,7 +1250,7 @@ import lora600 from "@fontsource/lora/files/lora-latin-600-normal.woff2";
         <div class="flex justify-center">
           <img
           class="rounded pt-0 mt-0 size-52 justify-center"
-          src="https://www.hbendekgey.me/images/games/one_night.png"
+          src="/images/games/one_night.png"
           alt="One Night Ultimate Werewolf"
         />
         </div>
@@ -1324,87 +1330,7 @@ import lora600 from "@fontsource/lora/files/lora-latin-600-normal.woff2";
         <div class="flex justify-center">
           <img
           class="rounded pt-0 mt-0 size-52 justify-center"
-          src="https://www.hbendekgey.me/images/games/secret_hitler.jpg"
-          alt="Secret Hitler"
-        />
-        </div>
-
-        <h3 class="mt-0">
-          <b>Secret Hitler</b>
-        </h3>
-
-        <p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-brain inline mr-2 mb-0.5"
-            ><path
-              d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
-            ></path><path
-              d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"
-            ></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"
-            ></path><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path><path
-              d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path
-              d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path
-              d="M19.938 10.5a4 4 0 0 1 .585.396"></path><path
-              d="M6 18a4 4 0 0 1-1.967-.516"></path><path
-              d="M19.967 17.484A4 4 0 0 1 18 18"></path></svg
-          > 1.74
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-users inline ml-6 mr-2 mb-0.5"
-            ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
-              cx="9"
-              cy="7"
-              r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
-              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
-          > 6-10
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="red"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-users inline mr-2 ml-6 mb-0.5"
-            ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
-              cx="9"
-              cy="7"
-              r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
-              d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
-          > 8, 10
-        </p>
-
-        <p>
-          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Social Deduction </div>
-          <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 rounded-xl bg-gray-200 transition-colors"> Sensitive Themes </div>
-        </p>
-      </div>
-
-      <div class="mt-8 border rounded-md p-5 text-center">
-
-        <div class="flex justify-center">
-          <img
-          class="rounded pt-0 mt-0 size-52 justify-center"
-          src="https://www.hbendekgey.me/images/games/two_rooms.jpg"
+          src="/images/games/two_rooms.jpg"
           alt="Two Rooms and a Boom"
         />
         </div>
@@ -1480,12 +1406,13 @@ import lora600 from "@fontsource/lora/files/lora-latin-600-normal.woff2";
       </div>
     </div>
 
-    <div id="other" class="grid grid-cols-3 gap-4">
-      <div></div>
-      <div><h3 class="mt-16 ml-16 mr-16 pt-4 pb-4 text-center rounded">
+    <div id="other" class="flex justify-center">
+      <h3 class="mt-16 w-60 py-4 text-center rounded">
         <b>Other Games</b>
-      </h3></div>
-      <div></div>
+      </h3>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 text-center rounded-xl bg-red-300"> Puerto Rico </div>
       <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 text-center rounded-xl bg-blue-200"> 7th Continent </div>
       <div class="inline-block p-2 px-3 mb-2 mr-1 ml-1 text-center rounded-xl bg-blue-200"> Ahoy </div>
