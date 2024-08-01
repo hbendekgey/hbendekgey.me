@@ -1,289 +1,192 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Medium Length Graduate Curriculum Vitae
-% LaTeX Template
-% Version 1.2 (3/28/15)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Rensselaer Polytechnic Institute 
-% (http://www.rpi.edu/dept/arc/training/latex/resumes/)
-%
-% Modified by:
-% Daniel L Marks <xleafr@gmail.com> 3/28/2015
-%
-% Important note:
-% This template requires the res.cls file to be in the same directory as the
-% .tex file. The res.cls file provides the resume style used for structuring the
-% document.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{resume} % Use the custom resume.cls style
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage[backend=biber, style=ieee, sorting=none]{biblatex}
 
-%-------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%-------------------------------------------------------------------------------
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.1in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Harry Bendekgey} % Your name
+\address{Homepage: \href{https://hbendekgey.me/}{\texttt{hbendekgey.me}}}
+\address{
+\href{https://scholar.google.com/citations?user=3oKUp10AAAAJ}{Google Scholar} \\ 
+ \href{https://github.com/hbendekgey}{Github} \\
+ \href{https://www.linkedin.com/in/hbendekgey}{LinkedIn}
+}
+\address{Email: \texttt{hbendekg@uci.edu}} % Your phone number and email
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% You can have multiple style options the legal options ones are:
-%
-%   centered:	the name and address are centered at the top of the page 
-%				(default)
-%
-%   line:		the name is the left with a horizontal line then the address to
-%				the right
-%
-%   overlapped:	the section titles overlap the body text (default)
-%
-%   margin:		the section titles are to the left of the body text
-%		
-%   11pt:		use 11 point fonts instead of 10 point fonts
-%
-%   12pt:		use 12 point fonts instead of 10 point fonts
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{CarnegieMellonRed}{RGB}{196,18,48}
 
-\documentclass[margin]{res}  
+\renewenvironment{rSection}[1]{
+\sectionskip
+\textcolor{CarnegieMellonRed}{\MakeUppercase{#1}}
+\sectionlineskip
+\hrule
+\begin{list}{}{
+\setlength{\leftmargin}{1.5em}
+}
+\item[]
+}{
+\end{list}
+}
 
-% Default font is the helvetica postscript font
-\usepackage{helvet}
 
-% Increase text height
-\textheight=700pt
 
 \begin{document}
+\begin{rSection}{Education}
+{\bf Ph.D., Computer Science} \hfill {\em June 2025 (expected)} 
+\\ University of California, Irvine.\hfill {\em GPA: 4.0}
+\\ Advised by Erik Sudderth
 
-%-------------------------------------------------------------------------------
-%	NAME AND ADDRESS SECTION
-%-------------------------------------------------------------------------------
-\name{Harry Bendekgey}
+{\bf B.A., Computer Science and Mathematics (Double Major)} \hfill {\em May 2019} 
+\\ Pomona College \hfill {\em GPA: 3.97}
 
-% Note that addresses can be used for other contact information:
-% -phone numbers
-% -email addresses
-% -linked-in profile
+\end{rSection}
 
-\address{}
-\address{www.hbendekgey.me\\github.com/hbendekgey\\linkedin.com/in/hbendekgey}
-
-% Uncomment to add a third address
-%\address{Address 3 line 1\\Address 3 line 2\\Address 3 line 3}
-%-------------------------------------------------------------------------------
-
-\begin{resume}
-
-%-------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%-------------------------------------------------------------------------------
-\section{Education}
-\textbf{Ph.D. Candidate, University of California, Irvine} \hfill Fall 2019-present\\
-Advised by Erik Sudderth. Advanced to Candidacy Spring 2022.\hfill GPA: 4.0\\ \\
-\textbf{B.A., Pomona College} \hfill Graduated Spring 2019\\
-Computer Science and Mathematics (Double Major) \hfill GPA: 3.97\\
-Thesis: Clustering Player Strategies from Variable-Length Game Logs in Dominion
-%-------------------------------------------------------------------------------
-
-%-------------------------------------------------------------------------------
-%	EXPERIENCE SECTION
-%-------------------------------------------------------------------------------
-% Modify the format of each position
-\begin{format}
-\title{l}\dates{r}\\
-\employer{l}\location{r}\\
-\body\\
-\end{format}
-%-------------------------------------------------------------------------------
-
-%\employer{Computer Science Department}
-%\location{Pomona College}
-%\dates{Fall 2018}
-%\title{\textbf{Research Fellow}}
-%\begin{position}
-%Designed a novel approach for understanding the landscape of personas across games;\\
-%Scraped and cleaned data from online \emph{Dominion} logs to visualize player strategies.
-%\end{position}
-%
-%\employer{Kenneth Cooke Research Fellowship}
-%\location{Pomona College}
-%\dates{Summer 2018}
-%\title{\textbf{Research Fellow}}
-%\begin{position}
-%Researched the mathematical models underlying state-of-the-art election forecasting;\\
-%Implemented adjustable forecasts for the 2018 midterm election based on these models.
-%\end{position}
-
-\section{Teaching Experience}
-\employer{ICS 6N: Computational Linear Algebra}
-\location{University of California, Irvine}
-\dates{Summer 2023}
-\title{\textbf{Instructor of Record}}
-\begin{position}
-	For the 10-week summer session: developed all course materials, lectured, and graded
-\end{position}
-
-\employer{CS 177: Applications of Probability in CS}
-\location{University of California, Irvine}
-\dates{Fall 2020, Winter 2024, Fall 2024}
-\title{\textbf{Teaching Assistant}}
-\begin{position}
-	Designed exam content in addition to standard TA duties: \\Holding office hours and discussion sections; grading assignments.
-\end{position}
-
-\employer{Computer Science Department}
-\location{Pomona College}
-\dates{}
-\title{\textbf{Teaching Assistant}}
-\begin{position}
-$\circ$ Discrete Math and Functional Programming (Head TA)\hfill Spring 2019\\
-$\circ$ Computer Systems \hfill Fall 2018\\
-$\circ$ Fundamentals of Computer Science (Head TA) \hfill Spring 2017, Spring 2018\\
-$\circ$ Introduction to Computer Science \hfill Spring 2016-Fall 2016
-
-\end{position}
-
-\employer{Mathematics Department}
-\location{Pomona College}
-\dates{}
-\title{\textbf{Mentor and Grader}}
-\begin{position}
-$\circ$ Combinatorial Mathematics \hfill Spring 2017, Spring 2018, Spring 2019\\
-$\circ$ Linear Algebra \hfill Fall 2018\\
-$\circ$ Statistical Theory \hfill Fall 2018
-
-\end{position}
-
-\section{Industry Experience}
-
-\employer{Chan Zuckerberg Biohub}
-\location{San Francisco}
-\dates{Summer 2019}
-\title{\textbf{Intern}}
-\begin{position}
-Work with the theory group on two projects touching biology, physics, and statistics:\\
-$\circ$ Investigating the ability of (MC)$^3$ to explore the space of phylogenetic trees, and \\
-$\circ$ Discovering a new power law for modeling diffusion in crowded dynamic spaces
-\end{position}
-
-\employer{QuanticMind}
-\location{}
-\dates{Summer 2017}
-\title{\textbf{Engineering Intern}}
-\begin{position}
-Created an API for employees to access databases without requiring access credentials;
-Led meetings with colleagues to generate common use cases to be addressed by API.\end{position}
-
-%-------------------------------------------------------------------------------
-
-%-------------------------------------------------------------------------------
-%	PUBLICATION SECTION
-%-------------------------------------------------------------------------------
-
-\section{Publications}
-\par
-Unbiased learning of deep generative models with structured discrete \\representations. \\ H Bendekgey, G Hope, E Sudderth. NeurIPS 2023
-
-Scaling Study of Diffusion in Dynamic Crowded Spaces. \\H Bendekgey, G Huber, D Yllanes, L Yan. APS March Meeting 2022
-
-Scalable \& Stable Surrogates for Flexible Classifiers with Fairness Constraints. \\ H Bendekgey, E Sudderth. NeurIPS 2021
-
-Clustering Player Strategies from Variable-Length Game Logs in \emph{Dominion}.\\ H Bendekgey, AAAI Workshop on Knowledge Extraction from Games (KEG), 2019.
-
-\section{Publications\\ In Submission}
-
-%Human Motion Modeling with Discretized Dynamics. \\ {H Bendekgey}, G Hope, E Sudderth. 
-
-Fast inference in sparse time series. \\ {H Bendekgey}, D Sujono, M Motamed, E Sudderth. 
-
-Undergraduate data science education: Who has the microphone and what are they saying?\\
-M Dogucu, S Demirci, H Bendekgey, FZ Ricci, CM Medina. 
-
-%Consistency and Reproducibility in U.S. House of Representatives Forecasts.\\ \textbf{H Bendekgey}, arXiv preprint arXiv:1811.12466, 2018
-
-%-------------------------------------------------------------------------------
-
-%-------------------------------------------------------------------------------
-%	COMPUTER SKILLS SECTION
-%-------------------------------------------------------------------------------
-
-%\section{Projects}
-%\textbf{Midterms Forecasting Website}\\
-%github.com/hbendekgey/midterms-website\\
-%Codebase for a fully interactive website to understand the differences in popular election forecasting methods, and to see how changing assumptions or parameters affects the final forecast.
-%
-%\textbf{Spotify Data Science Workshop}\\
-%github.com/hbendekgey/Spotify-Workshop\\
-%Detailed step-by-step instructions for how to use Spotify's API to get audio features of one's own music library, and then practice common machine learning techniques in Python on that data.
-%
-%\par
-%\textbf{Cellular Automata}\\ 
-%varsncrafts.com/\#/crafts/react/Cellular\%20Automaton\\
-%Implementation of a generic cellular automaton with modifiable rule space, to understand how emergent properties can manifest in seemingly simple systems.
-
- 
-
-%-------------------------------------------------------------------------------
-%	Interests
-%-------------------------------------------------------------------------------
-\section{Talks}
-
-Why We Use Reverse-Mode Autodiff (And the Time I Didn't) \hfill Feb 2024\\ 
-UC Irvine DataLab Seminar
-
-Unbiased Learning of Deep Generative Mdels with Discrete Representations \hfill Nov 2023\\ 
-Pomona College Computer Science Colloquium Series.
-
-\section{Department Service}
+\begin{rSection}{Areas of Specialization}
+\begin{multicols}{2}
+\begin{itemize}
+    \item Optimization + Constrained Optimization
+    \item Fairness + Interpretability in Deep Learning
+    \item Deep Generative Modeling
+    \item Variational Inference
+\end{itemize}
+\end{multicols}
+\end{rSection}
 
 
+\begin{rSection}{Teaching}
 
-AI Faculty Search Committee, Student Member \hfill 2022-2024\\
-I was part of a group of 4-6 PhD students who interviewed faculty candidates with a focus on their research, their advising styles, and their interactions with PhD students. 
+{\bf Instructor}, University of California, Irvine \hfill {\em Summer 2023 (10-Week Session)}\\
+ICS 6N: Computational Linear Algebra
+\begin{list}{$\cdot$}{\leftmargin=0em} 
+    \itemsep -0.5em \vspace{-0.5em}
+      \item I lectured, designed my own course materials and examinations, and graded a class of 21 students.
+      \item This alternative to the math department's linear algebra course is required for students majoring in computer science or data science.
+  \end{list}
+  \vspace{1.em}
 
-HPI@UCI Workshop Organizer \hfill Apr 2024\\
-Coordinated talks and activities for 30 workshop attendees from UC Irvine and the Hasso-Plattner Institute in Germany.
+ \smallskip {\bf Teaching Assistant}, University of California, Irvine \hfill {\em Fall 2020, Winter 2024, Fall 2024}\\
+ CS 177: Applications of Probability in CS\\
+ In addition to standard teaching assistant responsibilities, I designed exam content. 
+  \vspace{1.em}
 
-HPI@UCI Reading Group Organizer \hfill 2021-2022\\
-Organized a cross-lab reading group of 15 student fellows across machine learning specializations for the 2021-2022 academic year.
+ \smallskip {\bf Teaching Assistant}, Pomona College Computer Science Department
+\begin{list}{$\cdot$}{\leftmargin=0em}
+    \itemsep -0.5em \vspace{-0.5em}
+      \item CS54: Discrete Math and Functional Programming (Head TA) \hfill {\em Spring 2019}
+      \item CS105: Computer Systems \hfill {\em Fall 2018}
+      \item CS52: Fundamentals of Computer Science (Head TA) \hfill {\em Spring 2017, Spring 2018}
+      \item CS51: Introduction to Computer Science \hfill {\em Spring 2016, Fall 2016}
+  \end{list}
+  \vspace{1.em}
 
-\section{UC Irvine\,\, Awards}
+ \smallskip {\bf Mentor and Grader}, Pomona College Mathematics and Statistics Department
+\begin{list}{$\cdot$}{\leftmargin=0em}
+    \itemsep -0.5em \vspace{-0.5em}
+      \item MATH103: Combinatorial Mathematics \hfill {\em Spring 2017, Spring 2018, Spring 2019}
+      \item MATH152: Statistical Theory \hfill {\em Fall 2018}
+      \item MATH60: Linear Algebra \hfill {\em Fall 2018}
+  \end{list}
+  \vspace{0.5em}
 
-Hasso Plattner Institute Fellowship \hfill 2021-2023\\
-Provides 3 years of full Ph.D funding for work on adaptive, safe and human-centered artificial intelligence.
+\newpage 
+\end{rSection}
+\begin{rSection}{Publications} \itemsep -2pt
+{\bf Conference}
+\begin{enumerate}
+	\item {\em In Submission:} Fast inference in sparse time series.\\
+		{\bf H Bendekgey}, D Sujono, M Motamed, E Sudderth.
 
-Enhanced Computer Science Department Excellence Fellowship \hfill 2019-2020\\
-Allows first-year Ph.D students to engage sooner and more deeply with research by dispensing with teaching assistant requirement.
+	\item Unbiased learning of deep generative models with structured discrete
+representations.\\
+		{\bf H Bendekgey}, G Hope, E Sudderth. NeurIPS 2023
+	\item Scalable \& Stable Surrogates for Flexible Classifiers with Fairness Constraints.\\
+		{\bf H Bendekgey}, E Sudderth. NeurIPS 2021
+\end{enumerate}
+\vspace{1.0em}
+{\bf In Journal Submission}
+\begin{enumerate}
+	\item Undergraduate data science education: Who has the microphone and what are they saying?\\
+		M Dogucu, S Demirci, {\bf H Bendekgey}, FZ Ricci, CM Medina. \href{https://arxiv.org/abs/2403.03387}{[ArXiv link]}
+	\item Scaling study of diffusion in dynamic crowded spaces.\\
+	      {\bf H Bendekgey}, G Huber, and D Yllanes. \href{https://arxiv.org/abs/2011.02444}{[ArXiv link]}
+	\item David Paper 1
+	\item David Paper 2
+\end{enumerate}
 
-Dean's Award \hfill 2019\\
-Extra first-year grant for outstanding research potential.
+{\bf Workshop}
+\begin{enumerate}
+	\item Clustering Player Strategies from Variable-Length Game Logs in {\em Dominion}.\\
+		{\bf H Bendekgey}, AAAI Workshop on Knowledge Extraction from Games (KEG), 2019.
+\end{enumerate}\vspace{1.em}
 
+\end{rSection}
 
-%\section{Pomona College Awards}
-%
-%\textbf{Paul B. Yale Computer Science Prize} \hfill 2019\\
-%Awarded annually to an outstanding senior majoring in Computer Science.
-%
-%\textbf{Phi Beta Kappa Award} \hfill 2019\\
-%Awarded to a senior for high quality of scholarship and promise of future distinction.
-%
-%\textbf{Kenneth Cooke Summer Research Fellowship} \hfill 2018\\
-%Grant for summer research in an area of applied mathematics or statistics.
-%
-%\textbf{Bruce Jay Levy Prize in Mathematics} \hfill 2018\\
-%Awarded annually to a student for excellence in the field of mathematics.
-%
-%\textbf{Llewellyn Bixby Mathematics Prize} \hfill 2017\\
-%Awarded annually to a sophomore for excellence in the second year of mathematics.
-%
-%\section{National \\Awards}
-%\textbf{Phi Beta Kappa Member} \hfill Elected Junior year, 2018\\
-%The oldest honor society in the country; at eligible schools, 2\% of Juniors are elected.
-%
-%\textbf{National Merit Scholar} \hfill 2015\\
-%College scholarship based on performance on the Practice SAT.
-%
-%\textbf{Caroline D. Bradley Scholar} \hfill 2011-2015\\
-%Merit-based, four-year high school scholarship granted to 11 students nationally.
+\begin{rSection}{Professional Experience}	
+{\bf Research Intern}, Chan-Zuckerberg Biohub \hfill {\em Summer 2019}
+\begin{list}{$\cdot$}{\leftmargin=0em} 
+    \itemsep -0.5em \vspace{-0.5em}
+      \item I worked with the theory group on two projects touching biology, physics, and statistics:
+      \item We explored the ability of (MC)$^3$ to explore the space of phylogenetic trees, and
+      \item We discovered a new power law for modeling diffusion in crowded dynamic spaces.
+  \end{list}
+  \vspace{1.em}
 
-%-------------------------------------------------------------------------------
-\end{resume}
+{\bf Engineering Intern}, QuanticMind \hfill {\em Summer 2017}
+\begin{list}{$\cdot$}{\leftmargin=0em} 
+    \itemsep -0.5em \vspace{-0.5em}
+      \item I created an API for employees to access databases without requiring access credentials, and
+      \item I led meetings with colleagues to generate common use cases to be addressed by the API.
+  \end{list}
+  \vspace{1.em}
+
+\end{rSection}
+
+\begin{rSection}{Invited Talks}	
+{\bf Why We Use Reverse-Mode Autodiff (And the Time I Didn't)} \hfill {\em Feb 2024}\\
+UC Irvine DataLab Seminar \vspace{1.em}
+
+{\bf Unbiased Learning of Deep Generative Mdels with Discrete Representations} \hfill {\em Nov 2023}\\
+Pomona College Computer Science Colloquium Series
+
+\end{rSection}
+\newpage
+\begin{rSection}{Awards and Honors}	
+{\bf UC Irvine Awards}
+\begin{list}{$\cdot$}{\leftmargin=0em} 
+    \itemsep -0.5em \vspace{-0.5em}
+\item Hasso Plattner Institute Fellowship\hfill {\em 2021-2023}
+\item Enhanced Computer Science Department Excellence Fellowship\hfill {\em 2019-2020}
+\item Dean's Award\hfill {\em 2019} 
+\end{list} \vspace{0.5em}
+
+{\bf Pomona College Awards}
+\begin{list}{$\cdot$}{\leftmargin=0em} 
+    \itemsep -0.5em \vspace{-0.5em}
+\item Paul B. Yale Computer Science Prize \hfill {\em 2019}
+\item Phi Beta Kappa Award \hfill {\em 2019}
+\item Phi Beta Kappa Member  \hfill {\em 2018}
+\item Kenneth Cooke Summer Research Fellowship \hfill {\em 2018}
+\item Bruce Jay Levy Prize in Mathematics \hfill {\em 2018}
+\item Llewellyn Bixby Mathematics Prize  \hfill {\em 2017}
+\end{list}
+\end{rSection}
+
+\begin{rSection}{UC Irvine Department Service}	
+{\bf Student Member of the AI Faculty Search Committee} \hfill {\em 2021-2023}\\
+I was one of 4-6 Ph.D. students who interviewed faculty candidates with a focus on their research, their advising styles, and their interactions with graduate students.
+  \vspace{1.em}
+
+{\bf HPI@UCI Workshop Organizer} \hfill {\em Apr 2024}\\
+I coordinated talks and activities for 30 workshop attendees from UC Irvine and the Hasso Plattner Institute in Germany. \vspace{1.em}
+
+{\bf HPI@UCI Reading Group Organizer} \hfill {\em 2021-2022}\\
+I organized a cross-lab reading group of 15 student fellows across machine learning specializations for the 2021-2022 academic year. \vspace{1.em}
+
+\end{rSection}
+
 \end{document}
+
+
